@@ -4,7 +4,7 @@ import n2exercici2.Payment.*;
 
 public class ShoeShop {
 
-    public void buyShoes(String paymentMethod, PaymentCallback callback) {
+    public static void buyShoes(String paymentMethod, PaymentCallback callback) {
         PaymentMethod payment;
 
         switch (paymentMethod) {

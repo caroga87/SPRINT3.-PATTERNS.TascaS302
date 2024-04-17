@@ -1,23 +1,23 @@
 package n3exercici1;
 
-import n3exercici1.Currencies.Currency;
+import java.util.HashMap;
+import java.util.Map;
 
 public class ExchangeCurrency {
-    private Currency currencyType;
 
-    public ExchangeCurrency(Currency currencyType) {
-        this.currencyType = currencyType;
+    private Map <String, Double> converter;
+
+    public ExchangeCurrency () {
+        converter = new HashMap<>();
+        converter.put("EUR",1.0); // euro com a moneda base
+        converter.put("USD", 1.06); // 1 euro = 1.06 dollars
+        converter.put("GBP", 0.85); // 1 euro = 0,85 lliures
+        converter.put("CZK",25.23); // 1 euro = 25,23 corones txeques
     }
 
-    public Currency getCurrencyType() {
-        return currencyType;
+    public double converter (double price, String currency){
+        double changeRate = converter.get(currency);
+        return price * changeRate;
     }
 
-    public void setCurrencyType(Currency currencyType) {
-        this.currencyType = currencyType;
-    }
-
-    public double changeCurrency (Currency initial, double quantity){
-
-    }
 }

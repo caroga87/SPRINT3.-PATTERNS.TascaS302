@@ -6,7 +6,6 @@ import java.util.Scanner;
 
 public class MainShoeShop {
     public static void main(String[] args) {
-        ShoeShop shop = new ShoeShop();
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Choose a payment method:\n1. Credit card\n2. PayPal\n3. Credit Bank account");
@@ -27,13 +26,13 @@ public class MainShoeShop {
         try {
             switch (choice) {
                 case 1:
-                    shop.buyShoes("credit_card", callback);
+                    ShoeShop.buyShoes("credit_card", callback);
                     break;
                 case 2:
-                    shop.buyShoes("paypal", callback);
+                    ShoeShop.buyShoes("paypal", callback);
                     break;
                 case 3:
-                    shop.buyShoes("bank_account", callback);
+                    ShoeShop.buyShoes("bank_account", callback);
                     break;
                 default:
                     System.out.println("Invalid option");

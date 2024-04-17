@@ -1,16 +1,14 @@
 package n3exercici1;
 
-import n3exercici1.Currencies.Currency;
-
 public class Product {
     private String name;
     private double price;
-    private Currency currencyType;
+    private ExchangeCurrency exchangeCurrency;
 
-    public Product(String name, double price, Currency currencyType) {
+    public Product(String name, double price, ExchangeCurrency exchangeCurrency) {
         this.name = name;
         this.price = price;
-        this.currencyType = currencyType;
+        this.exchangeCurrency = exchangeCurrency;
     }
 
     public String getName() {
@@ -21,7 +19,7 @@ public class Product {
         return price;
     }
 
-    public Currency getCurrencyType() {
+    /*public Currency getCurrencyType() {
         return currencyType;
-    }
+    }*/
 }
