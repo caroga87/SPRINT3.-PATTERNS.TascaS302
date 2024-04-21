@@ -2,6 +2,7 @@ package n3exercici1;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 
 public class ExchangeCurrency {
 
@@ -18,6 +19,10 @@ public class ExchangeCurrency {
     public double converter (double price, String currency){
         double changeRate = converter.get(currency);
         return price * changeRate;
+    }
+
+    public Set<String> getDisponibleCurrency() {
+        return converter.keySet();
     }
 
 }

@@ -19,7 +19,8 @@ public class Product {
         return price;
     }
 
-    /*public Currency getCurrencyType() {
-        return currencyType;
-    }*/
+    public void price (String currency) {
+        double changeCurrency = exchangeCurrency.converter(price, currency);
+        System.out.println("The price of the " +name +" is " +price +" wich is equivalent to " +String.format ("%.2f", changeCurrency) +" " +currency);
+    }
 }
